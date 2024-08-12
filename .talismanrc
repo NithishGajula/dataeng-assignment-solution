@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: src/spec_loader.py
+  checksum: 05be095b4bc8ed0b218039f73f0f11c13c464cee7e1098e734beb40aab8525b4
+version: ""
