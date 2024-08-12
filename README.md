@@ -18,6 +18,30 @@
 - Bonus points if you deliver a docker container (Dockerfile) that can be used to run the code (too lazy to install stuff that you might use)
 - Pay attention to encoding
 
+
+## Steps to run the solution for Problem 1
+To make it really easy for the evaluators to run this solution regardless of their operating system, I have provided a containerised way to run the exercise. To make use of this, you'll need to have Docker (or a free equivalent like Rancher or Colima) installed on your system.
+
+To start the process, there is a Dockerfile in the root of the project. This defines a linux-based container that includes Python 3.11
+
+To build the container:
+```shell
+docker build -t file-generator-from-fixed-width .
+```
+
+To run the container after building it:
+
+_Mac or Linux, or Windows with WSL:_
+```shell
+docker run --rm -v $(pwd):/usr/src/app file-generator-from-fixed-width
+```
+
+_Windows (without WSL):_
+```shell
+docker run --rm -v %cd%:/usr/src/app file-generator-from-fixed-width
+```
+
+
 ## Problem 2
 
 ### Data processing
